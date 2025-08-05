@@ -2,132 +2,63 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <title>Questionário de Sinais e Sintomas</title>
-    <style>
-        body { font-family: Arial, sans-serif; padding: 20px; max-width: 900px; margin: auto; }
-        h1 { text-align: center; }
-        .logo { text-align: center; margin-bottom: 20px; }
-        .sintoma { margin: 5px 0; }
-        .controls { margin-top: 20px; text-align: center; }
-        textarea, input[type="text"] { width: 100%; padding: 8px; margin-bottom: 10px; }
-        button { padding: 10px 20px; margin: 5px; font-size: 16px; cursor: pointer; }
-        .bloco { padding: 10px; border: 1px solid #ccc; margin-bottom: 10px; border-radius: 8px; }
-    </style>
+  <meta charset="UTF-8">
+  <title>Assistente Semiologia Nutricional</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      line-height: 1.8;
+      font-size: 1.05rem;
+      background-color: #ffffff;
+      color: #1a1a1a;
+      padding: 2rem;
+      text-align: center;
+    }
+    .logo img {
+      max-width: 180px;
+      display: block;
+      margin: 0 auto 1rem;
+    }
+    .btn {
+      display: inline-block;
+      padding: 1rem 2rem;
+      font-size: 1rem;
+      background-color: #e1ecf4;
+      color: #1a1a1a;
+      border: 1px solid #b0c4d4;
+      border-radius: 8px;
+      text-decoration: none;
+      margin: 1rem;
+    }
+    .instructions {
+      background-color: #f2f4f7;
+      padding: 1.2rem;
+      margin: 2rem auto;
+      border-left: 4px solid #ccc;
+      max-width: 800px;
+    }
+  </style>
 </head>
 <body>
-    <div class="logo">
-        <img src="Logo Semiologia.png" alt="Logo" width="150">
-    </div>
-    <h1>Questionário de Sinais e Sintomas</h1>
-    <p>Marque os sintomas presentes e clique no botão abaixo para copiar os selecionados. Depois, cole no chat.</p>
-
-    <label for="nome">Nome do paciente (opcional):</label>
-    <input type="text" id="nome" placeholder="Digite o nome do paciente">
-
-    <label for="obs">Observações clínicas (opcional):</label>
-    <textarea id="obs" rows="4" placeholder="Digite aqui..."></textarea>
-
-    <div class="bloco">
-        <h3>Lista de Sintomas (ordem alfabética)</h3>
-<div class="sintoma"><label><input type="checkbox" value="Aftas"> Aftas</label></div>
-<div class="sintoma"><label><input type="checkbox" value="Alteração de peso"> Alteração de peso</label></div>
-<div class="sintoma"><label><input type="checkbox" value="Alteração do humor"> Alteração do humor</label></div>
-<div class="sintoma"><label><input type="checkbox" value="Alteração do ritmo cardiorespiratório"> Alteração do ritmo cardiorespiratório</label></div>
-<div class="sintoma"><label><input type="checkbox" value="Alterações de fluxo menstrual"> Alterações de fluxo menstrual</label></div>
-<div class="sintoma"><label><input type="checkbox" value="Alterações na audição"> Alterações na audição</label></div>
-<div class="sintoma"><label><input type="checkbox" value="Alterações na visão"> Alterações na visão</label></div>
-<div class="sintoma"><label><input type="checkbox" value="Alterações nas unhas (estrias e/ou manchas)"> Alterações nas unhas (estrias e/ou manchas)</label></div>
-<div class="sintoma"><label><input type="checkbox" value="Amortecimento de braços e pernas"> Amortecimento de braços e pernas</label></div>
-<div class="sintoma"><label><input type="checkbox" value="Anemia"> Anemia</label></div>
-<div class="sintoma"><label><input type="checkbox" value="Ansiedade"> Ansiedade</label></div>
-<div class="sintoma"><label><input type="checkbox" value="Apetite aumentado"> Apetite aumentado</label></div>
-<div class="sintoma"><label><input type="checkbox" value="Ardência / prurido (genital e/ou anal)"> Ardência / prurido (genital e/ou anal)</label></div>
-<div class="sintoma"><label><input type="checkbox" value="Azia"> Azia</label></div>
-<div class="sintoma"><label><input type="checkbox" value="Bruxismo"> Bruxismo</label></div>
-<div class="sintoma"><label><input type="checkbox" value="Celulite"> Celulite</label></div>
-<div class="sintoma"><label><input type="checkbox" value="Coceira no ouvido"> Coceira no ouvido</label></div>
-<div class="sintoma"><label><input type="checkbox" value="Compulsividade"> Compulsividade</label></div>
-<div class="sintoma"><label><input type="checkbox" value="Cãimbras"> Cãimbras</label></div>
-<div class="sintoma"><label><input type="checkbox" value="Depressão"> Depressão</label></div>
-<div class="sintoma"><label><input type="checkbox" value="Desânimo"> Desânimo</label></div>
-<div class="sintoma"><label><input type="checkbox" value="Diabetes ou pré diabetes"> Diabetes ou pré diabetes</label></div>
-<div class="sintoma"><label><input type="checkbox" value="Diarreia"> Diarreia</label></div>
-<div class="sintoma"><label><input type="checkbox" value="Dificuldade de cicatrização"> Dificuldade de cicatrização</label></div>
-<div class="sintoma"><label><input type="checkbox" value="Digestão lenta"> Digestão lenta</label></div>
-<div class="sintoma"><label><input type="checkbox" value="Diminuição de memória"> Diminuição de memória</label></div>
-<div class="sintoma"><label><input type="checkbox" value="Dor de cabeça"> Dor de cabeça</label></div>
-<div class="sintoma"><label><input type="checkbox" value="Dores musculares ou articulares"> Dores musculares ou articulares</label></div>
-<div class="sintoma"><label><input type="checkbox" value="Eructação (arrotos)"> Eructação (arrotos)</label></div>
-<div class="sintoma"><label><input type="checkbox" value="Escamação (couro cabeludo, sobrancelha, cotovelo, joelho, ao redor do nariz, ouvido)"> Escamação (couro cabeludo, sobrancelha, cotovelo, joelho, ao redor do nariz, ouvido)</label></div>
-<div class="sintoma"><label><input type="checkbox" value="Espinhas"> Espinhas</label></div>
-<div class="sintoma"><label><input type="checkbox" value="Fadiga"> Fadiga</label></div>
-<div class="sintoma"><label><input type="checkbox" value="Flacidez muscular"> Flacidez muscular</label></div>
-<div class="sintoma"><label><input type="checkbox" value="Flatulência"> Flatulência</label></div>
-<div class="sintoma"><label><input type="checkbox" value="Fraqueza/desmaio"> Fraqueza/desmaio</label></div>
-<div class="sintoma"><label><input type="checkbox" value="Gosto ruim na boca (ex: gosto metálico)"> Gosto ruim na boca (ex: gosto metálico)</label></div>
-<div class="sintoma"><label><input type="checkbox" value="Gânglios no pescoço"> Gânglios no pescoço</label></div>
-<div class="sintoma"><label><input type="checkbox" value="Hemorróidas"> Hemorróidas</label></div>
-<div class="sintoma"><label><input type="checkbox" value="Hiperatividade física e/ou mental"> Hiperatividade física e/ou mental</label></div>
-<div class="sintoma"><label><input type="checkbox" value="Hipercolesterolemia"> Hipercolesterolemia</label></div>
-<div class="sintoma"><label><input type="checkbox" value="Hipertrigliceridemia"> Hipertrigliceridemia</label></div>
-<div class="sintoma"><label><input type="checkbox" value="Hipoglicemia (observada)"> Hipoglicemia (observada)</label></div>
-<div class="sintoma"><label><input type="checkbox" value="Inchaço ao acordar"> Inchaço ao acordar</label></div>
-<div class="sintoma"><label><input type="checkbox" value="Infecções frequentes"> Infecções frequentes</label></div>
-<div class="sintoma"><label><input type="checkbox" value="Insônia"> Insônia</label></div>
-<div class="sintoma"><label><input type="checkbox" value="Irritabilidade"> Irritabilidade</label></div>
-<div class="sintoma"><label><input type="checkbox" value="Língua rachada e/ou branca"> Língua rachada e/ou branca</label></div>
-<div class="sintoma"><label><input type="checkbox" value="Manchas brancas nas unhas"> Manchas brancas nas unhas</label></div>
-<div class="sintoma"><label><input type="checkbox" value="Manchas roxas na pele"> Manchas roxas na pele</label></div>
-<div class="sintoma"><label><input type="checkbox" value="Mau hálito"> Mau hálito</label></div>
-<div class="sintoma"><label><input type="checkbox" value="Melasma"> Melasma</label></div>
-<div class="sintoma"><label><input type="checkbox" value="Menor capacidade de concentração"> Menor capacidade de concentração</label></div>
-<div class="sintoma"><label><input type="checkbox" value="Micose de unha"> Micose de unha</label></div>
-<div class="sintoma"><label><input type="checkbox" value="Microvasos"> Microvasos</label></div>
-<div class="sintoma"><label><input type="checkbox" value="Mãos e pés frios"> Mãos e pés frios</label></div>
-<div class="sintoma"><label><input type="checkbox" value="Nervosismo"> Nervosismo</label></div>
-<div class="sintoma"><label><input type="checkbox" value="Náuseas e vômitos"> Náuseas e vômitos</label></div>
-<div class="sintoma"><label><input type="checkbox" value="Obstipação intestinal"> Obstipação intestinal</label></div>
-<div class="sintoma"><label><input type="checkbox" value="Olhos inchados, lacrimejando, olheiras"> Olhos inchados, lacrimejando, olheiras</label></div>
-<div class="sintoma"><label><input type="checkbox" value="Osteoporose ou osteopenia"> Osteoporose ou osteopenia</label></div>
-<div class="sintoma"><label><input type="checkbox" value="Ovário policístico"> Ovário policístico</label></div>
-<div class="sintoma"><label><input type="checkbox" value="Pele oleosa (rosto, peito, costas)"> Pele oleosa (rosto, peito, costas)</label></div>
-<div class="sintoma"><label><input type="checkbox" value="Pele ressecada"> Pele ressecada</label></div>
-<div class="sintoma"><label><input type="checkbox" value="Perda do paladar"> Perda do paladar</label></div>
-<div class="sintoma"><label><input type="checkbox" value="Pigarro na garganta"> Pigarro na garganta</label></div>
-<div class="sintoma"><label><input type="checkbox" value="Pressão alta ou baixa"> Pressão alta ou baixa</label></div>
-<div class="sintoma"><label><input type="checkbox" value="Psoríase"> Psoríase</label></div>
-<div class="sintoma"><label><input type="checkbox" value="Queda de cabelo"> Queda de cabelo</label></div>
-<div class="sintoma"><label><input type="checkbox" value="Rachadura nos lábios e canto da boca"> Rachadura nos lábios e canto da boca</label></div>
-<div class="sintoma"><label><input type="checkbox" value="Refluxo"> Refluxo</label></div>
-<div class="sintoma"><label><input type="checkbox" value="Sangramento da gengiva"> Sangramento da gengiva</label></div>
-<div class="sintoma"><label><input type="checkbox" value="Sintomas respiratórios (asma, rinite, sinusite, produção excessiva de muco)"> Sintomas respiratórios (asma, rinite, sinusite, produção excessiva de muco)</label></div>
-<div class="sintoma"><label><input type="checkbox" value="Sonolência"> Sonolência</label></div>
-<div class="sintoma"><label><input type="checkbox" value="Sonolência após o almoço"> Sonolência após o almoço</label></div>
-<div class="sintoma"><label><input type="checkbox" value="Suor noturno"> Suor noturno</label></div>
-<div class="sintoma"><label><input type="checkbox" value="TPM (nervosismo, vontade de doce, cólica menstrual)"> TPM (nervosismo, vontade de doce, cólica menstrual)</label></div>
-<div class="sintoma"><label><input type="checkbox" value="Tontura/alta de equilíbrio"> Tontura/alta de equilíbrio</label></div>
-<div class="sintoma"><label><input type="checkbox" value="Transpiração excessiva de mãos e pés"> Transpiração excessiva de mãos e pés</label></div>
-<div class="sintoma"><label><input type="checkbox" value="Unhas frágeis/quebradiças"> Unhas frágeis/quebradiças</label></div>
-<div class="sintoma"><label><input type="checkbox" value="Vermelhidão e escamação na virilha"> Vermelhidão e escamação na virilha</label></div>
-<div class="sintoma"><label><input type="checkbox" value="Vontade de doce ao longo do dia"> Vontade de doce ao longo do dia</label></div>
-<div class="sintoma"><label><input type="checkbox" value="Vontade de doce após a refeição"> Vontade de doce após a refeição</label></div>
-<div class="sintoma"><label><input type="checkbox" value="Vontade de doce no final da tarde"> Vontade de doce no final da tarde</label></div>
-
-    </div>
-    <div class="controls">
-        <button onclick="copiarSelecionados()">Copiar selecionados</button>
-        <button onclick="window.print()">Exportar em PDF</button>
-    </div>
-    <script>
-        function copiarSelecionados() {
-            const selecionados = [...document.querySelectorAll('input[type=checkbox]:checked')]
-                .map(cb => cb.value).join('\n');
-            const textoFinal = `Nome: ${document.getElementById('nome').value}\nObservações: ${document.getElementById('obs').value}\n\nSintomas:\n` + selecionados;
-            navigator.clipboard.writeText(textoFinal).then(() => {
-                alert("Sintomas copiados para a área de transferência!");
-            });
-        }
-    </script>
+  <div class="logo">
+    <img src="Logo Semiologia.png" alt="Logo Semiologia">
+  </div>
+  <h1>Assistente para interpretação de sinais e sintomas de desequilíbrios nutricionais</h1>
+  <h3>Baseado nas obras da Dra. Denise Carreiro</h3>
+  <div class="instructions">
+    👉 Se preferir preencher o questionário de sinais e sintomas:<br>
+    <b>1.</b> Clique no botão abaixo para preencher o formulário.<br>
+    <b>2.</b> Selecione os sintomas, clique em "Copiar selecionados".<br>
+    <b>3.</b> Depois, clique no botão do assistente e cole os sintomas no chat.<br><br>
+    ⚠️ Se preferir digitar manualmente os sintomas, clique diretamente no botão do assistente.
+  </div>
+  <div>
+    <a class="btn" href="https://robertaursaia.github.io/questionario-semiologia/" target="_blank">
+      Preencher o questionário de sinais e sintomas
+    </a>
+    <a class="btn" href="https://chat.openai.com/g/g-6883dfb33b848191a1de2bbd5b9351b8-semiologia-nutricional?prompt=Voc%C3%AA%20%C3%A9%20um%20profissional%20da%20sa%C3%BAde%3F%20Informe%20seu%20n%C3%BAmero%20de%20registro.%20Depois%2C%20cole%20os%20sintomas%20copiados%20do%20formul%C3%A1rio%20ou%20digite%20manualmente." target="_blank">
+      Acessar o Assistente
+    </a>
+  </div>
 </body>
 </html>
